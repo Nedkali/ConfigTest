@@ -100,7 +100,6 @@
         Dim arr() As String
         Dim i As Integer
         Dim count As Integer = 0
-        Dim count2 As Integer = 0
         Dim temp() As String
         arr = Split(RichTextBox1.Text, vbLf)
 
@@ -113,10 +112,10 @@
             ' add scripts to an array
             If arr(i).Contains("AutoTeleport.ntj") = True Then Continue For
             If arr(i).Contains("NTTravLeader.ntj") = True Then Continue For
-            If arr(i).Contains("NTConfig_Script.push") = True Then temp = arr(i).Split(";") : script.Add(temp(0)) : MyScriptCheck(temp(0)) : count2 = count2 + 1
+            If arr(i).Contains("NTConfig_Script.push") = True Then temp = arr(i).Split(";") : MyScriptCheck(temp(0))
 
         Next
-        'ToolStripLabel3.Text = script(1)
+
 
     End Sub
 
