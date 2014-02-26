@@ -2,7 +2,12 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         myTextBox = {TextBox1, TextBox2, TextBox3, TextBox4, TextBox5}
-        chkbox = {CheckBox1, CheckBox2, CheckBox3, CheckBox4, CheckBox5, CheckBox6}
+        chkbox = {CheckBox1, CheckBox2, CheckBox3, CheckBox4, CheckBox5, CheckBox6, CheckBox7, CheckBox8, CheckBox9, CheckBox10,
+                  CheckBox11, CheckBox12, CheckBox13, CheckBox14, CheckBox15, CheckBox16, CheckBox17, CheckBox18, CheckBox19, CheckBox20,
+                  CheckBox21, CheckBox22, CheckBox23, CheckBox24, CheckBox25, CheckBox26, CheckBox27, CheckBox28, CheckBox29, CheckBox30,
+                  CheckBox31, CheckBox32, CheckBox33, CheckBox34, CheckBox35, CheckBox36, CheckBox37, CheckBox38, CheckBox39, CheckBox40,
+                  CheckBox41, CheckBox42, CheckBox43, CheckBox44, CheckBox45, CheckBox46, CheckBox47, CheckBox48, CheckBox49, CheckBox50,
+                  CheckBox51, CheckBox52}
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
@@ -158,4 +163,7 @@
     End Sub
 
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MySub3()
+    End Sub
 End Class
