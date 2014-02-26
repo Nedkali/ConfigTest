@@ -32,7 +32,6 @@ Partial Class Form1
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.CharNameBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.CharClassBox = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -471,7 +470,7 @@ Partial Class Form1
         '
         'ToolStrip2
         '
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.CharNameBox, Me.ToolStripSeparator1, Me.ToolStripLabel2, Me.CharClassBox, Me.ToolStripButton1, Me.ToolStripLabel3})
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.CharNameBox, Me.ToolStripLabel2, Me.CharClassBox, Me.ToolStripButton1, Me.ToolStripLabel3})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip2.Name = "ToolStrip2"
         Me.ToolStrip2.Size = New System.Drawing.Size(1022, 25)
@@ -488,11 +487,6 @@ Partial Class Form1
         '
         Me.CharNameBox.Name = "CharNameBox"
         Me.CharNameBox.Size = New System.Drawing.Size(100, 25)
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripLabel2
         '
@@ -3850,7 +3844,6 @@ Partial Class Form1
     Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents CharNameBox As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents CharClassBox As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl

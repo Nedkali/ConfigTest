@@ -60,7 +60,7 @@
     End Sub
     Sub RemoveSpaceErrors()
         For index = 1 To 3
-
+            RichTextBox1.Text = Replace(RichTextBox1.Text, "  ", vbTab & " ")
             RichTextBox1.Text = Replace(RichTextBox1.Text, " " & vbTab, " ")
             RichTextBox1.Text = Replace(RichTextBox1.Text, vbTab & " ", " ")
             RichTextBox1.Text = Replace(RichTextBox1.Text, "=" & vbTab, "=")
@@ -163,6 +163,7 @@
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MySub3()
+        ' MySub3()
+        FixSimpleErrors()
     End Sub
 End Class
