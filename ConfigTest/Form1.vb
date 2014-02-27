@@ -22,7 +22,7 @@
 
         CharFile = openFileDialog1.FileName
         Try
-            RichTextBox1.LoadFile(CharFile, RichTextBoxStreamType.UnicodePlainText)
+            RichTextBox1.LoadFile(CharFile, RichTextBoxStreamType.PlainText)
         Catch ex As Exception
             MessageBox.Show("error opening file")
             Return
