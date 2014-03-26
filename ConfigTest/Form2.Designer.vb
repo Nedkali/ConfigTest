@@ -110,6 +110,7 @@ Partial Class Form2
         Me.RichTextBox1.Size = New System.Drawing.Size(741, 577)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.WordWrap = False
         '
         'Form2
         '
