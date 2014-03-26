@@ -26,6 +26,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EOLTrimToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +39,12 @@ Partial Class Form1
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label144 = New System.Windows.Forms.Label()
+        Me.Label143 = New System.Windows.Forms.Label()
+        Me.Label142 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
@@ -112,6 +119,9 @@ Partial Class Form1
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -148,6 +158,7 @@ Partial Class Form1
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
@@ -175,6 +186,8 @@ Partial Class Form1
         Me.Label14 = New System.Windows.Forms.Label()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -215,8 +228,11 @@ Partial Class Form1
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
         Me.Label109 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
         Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.Label105 = New System.Windows.Forms.Label()
+        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.Label101 = New System.Windows.Forms.Label()
@@ -224,9 +240,6 @@ Partial Class Form1
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.Label97 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
@@ -348,8 +361,7 @@ Partial Class Form1
         Me.TabPage9 = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ToolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -424,7 +436,6 @@ Partial Class Form1
         Me.GroupBox54.SuspendLayout()
         Me.GroupBox53.SuspendLayout()
         Me.TabPage9.SuspendLayout()
-        Me.TabPage10.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -438,7 +449,7 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.SaveToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -449,9 +460,15 @@ Partial Class Form1
         Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.SaveToolStripMenuItem.Text = "Save"
+        '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WordWrapToolStripMenuItem, Me.EOLTrimToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WordWrapToolStripMenuItem, Me.EOLTrimToolStripMenuItem, Me.ToolToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.SettingsToolStripMenuItem.Text = "Settings"
@@ -533,6 +550,12 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label144)
+        Me.TabPage1.Controls.Add(Me.Label143)
+        Me.TabPage1.Controls.Add(Me.Label142)
+        Me.TabPage1.Controls.Add(Me.ComboBox3)
+        Me.TabPage1.Controls.Add(Me.ComboBox2)
+        Me.TabPage1.Controls.Add(Me.ComboBox1)
         Me.TabPage1.Controls.Add(Me.CheckBox3)
         Me.TabPage1.Controls.Add(Me.Label49)
         Me.TabPage1.Controls.Add(Me.Label48)
@@ -548,6 +571,60 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 2
         Me.TabPage1.Text = "Test boxes"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label144
+        '
+        Me.Label144.AutoSize = True
+        Me.Label144.Location = New System.Drawing.Point(527, 159)
+        Me.Label144.Name = "Label144"
+        Me.Label144.Size = New System.Drawing.Size(28, 13)
+        Me.Label144.TabIndex = 209
+        Me.Label144.Text = "Log "
+        '
+        'Label143
+        '
+        Me.Label143.AutoSize = True
+        Me.Label143.Location = New System.Drawing.Point(527, 126)
+        Me.Label143.Name = "Label143"
+        Me.Label143.Size = New System.Drawing.Size(58, 13)
+        Me.Label143.TabIndex = 208
+        Me.Label143.Text = "announcer"
+        '
+        'Label142
+        '
+        Me.Label142.AutoSize = True
+        Me.Label142.Location = New System.Drawing.Point(511, 99)
+        Me.Label142.Name = "Label142"
+        Me.Label142.Size = New System.Drawing.Size(68, 13)
+        Me.Label142.TabIndex = 207
+        Me.Label142.Text = "JustA Hunter"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox3.Location = New System.Drawing.Point(627, 150)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox3.TabIndex = 197
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox2.Location = New System.Drawing.Point(627, 123)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox2.TabIndex = 196
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox1.Location = New System.Drawing.Point(627, 96)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox1.TabIndex = 195
         '
         'CheckBox3
         '
@@ -1322,6 +1399,9 @@ Partial Class Form1
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.ComboBox7)
+        Me.GroupBox6.Controls.Add(Me.ComboBox8)
+        Me.GroupBox6.Controls.Add(Me.ComboBox9)
         Me.GroupBox6.Controls.Add(Me.CheckBox7)
         Me.GroupBox6.Controls.Add(Me.TextBox17)
         Me.GroupBox6.Controls.Add(Me.Label42)
@@ -1357,6 +1437,33 @@ Partial Class Form1
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Leech Baal"
         '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox7.Location = New System.Drawing.Point(89, 131)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox7.TabIndex = 204
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox8.Location = New System.Drawing.Point(105, 163)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox8.TabIndex = 203
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox9.Location = New System.Drawing.Point(105, 194)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox9.TabIndex = 202
+        '
         'CheckBox7
         '
         Me.CheckBox7.AutoSize = True
@@ -1385,7 +1492,7 @@ Partial Class Form1
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(148, 194)
+        Me.Label43.Location = New System.Drawing.Point(159, 194)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(66, 13)
         Me.Label43.TabIndex = 55
@@ -1403,7 +1510,7 @@ Partial Class Form1
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(148, 166)
+        Me.Label40.Location = New System.Drawing.Point(159, 169)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(64, 13)
         Me.Label40.TabIndex = 51
@@ -1664,6 +1771,7 @@ Partial Class Form1
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.Label29)
+        Me.GroupBox5.Controls.Add(Me.ComboBox6)
         Me.GroupBox5.Controls.Add(Me.TextBox12)
         Me.GroupBox5.Controls.Add(Me.TextBox9)
         Me.GroupBox5.Controls.Add(Me.Label28)
@@ -1695,6 +1803,15 @@ Partial Class Form1
         Me.Label29.Size = New System.Drawing.Size(171, 13)
         Me.Label29.TabIndex = 40
         Me.Label29.Text = "Take Portal on message command"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox6.Location = New System.Drawing.Point(237, 169)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(45, 21)
+        Me.ComboBox6.TabIndex = 199
         '
         'TextBox12
         '
@@ -1931,6 +2048,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ComboBox4)
+        Me.GroupBox1.Controls.Add(Me.ComboBox5)
         Me.GroupBox1.Controls.Add(Me.TextBox21)
         Me.GroupBox1.Controls.Add(Me.TextBox20)
         Me.GroupBox1.Controls.Add(Me.Label10)
@@ -1945,6 +2064,24 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Leech Settings"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox4.Location = New System.Drawing.Point(95, 71)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(45, 21)
+        Me.ComboBox4.TabIndex = 201
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox5.Location = New System.Drawing.Point(95, 107)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(45, 21)
+        Me.ComboBox5.TabIndex = 200
         '
         'TextBox21
         '
@@ -2328,14 +2465,26 @@ Partial Class Form1
         '
         'GroupBox11
         '
+        Me.GroupBox11.Controls.Add(Me.ComboBox10)
         Me.GroupBox11.Controls.Add(Me.CheckBox11)
+        Me.GroupBox11.Controls.Add(Me.ComboBox11)
         Me.GroupBox11.Controls.Add(Me.Label105)
+        Me.GroupBox11.Controls.Add(Me.ComboBox12)
         Me.GroupBox11.Location = New System.Drawing.Point(206, 6)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(174, 121)
         Me.GroupBox11.TabIndex = 194
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "StonyField"
+        '
+        'ComboBox10
+        '
+        Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox10.Location = New System.Drawing.Point(43, 96)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox10.TabIndex = 209
         '
         'CheckBox11
         '
@@ -2346,6 +2495,15 @@ Partial Class Form1
         Me.CheckBox11.TabIndex = 162
         Me.CheckBox11.UseVisualStyleBackColor = True
         '
+        'ComboBox11
+        '
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox11.Location = New System.Drawing.Point(43, 69)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox11.TabIndex = 208
+        '
         'Label105
         '
         Me.Label105.AutoSize = True
@@ -2354,6 +2512,15 @@ Partial Class Form1
         Me.Label105.Size = New System.Drawing.Size(40, 13)
         Me.Label105.TabIndex = 169
         Me.Label105.Text = "Enable"
+        '
+        'ComboBox12
+        '
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"true", "false"})
+        Me.ComboBox12.Location = New System.Drawing.Point(43, 42)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(53, 21)
+        Me.ComboBox12.TabIndex = 207
         '
         'GroupBox10
         '
@@ -2415,9 +2582,6 @@ Partial Class Form1
         '
         'GroupBox7
         '
-        Me.GroupBox7.Controls.Add(Me.ComboBox3)
-        Me.GroupBox7.Controls.Add(Me.ComboBox2)
-        Me.GroupBox7.Controls.Add(Me.ComboBox1)
         Me.GroupBox7.Controls.Add(Me.Label66)
         Me.GroupBox7.Controls.Add(Me.Label65)
         Me.GroupBox7.Controls.Add(Me.Label64)
@@ -2429,33 +2593,6 @@ Partial Class Form1
         Me.GroupBox7.TabIndex = 191
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "BloodMoor"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"true", "false"})
-        Me.ComboBox3.Location = New System.Drawing.Point(107, 93)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(53, 21)
-        Me.ComboBox3.TabIndex = 194
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"true", "false"})
-        Me.ComboBox2.Location = New System.Drawing.Point(107, 66)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(53, 21)
-        Me.ComboBox2.TabIndex = 193
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"true", "false"})
-        Me.ComboBox1.Location = New System.Drawing.Point(107, 39)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(53, 21)
-        Me.ComboBox1.TabIndex = 192
         '
         'Label66
         '
@@ -3656,7 +3793,6 @@ Partial Class Form1
         '
         'TabPage10
         '
-        Me.TabPage10.Controls.Add(Me.RichTextBox2)
         Me.TabPage10.Location = New System.Drawing.Point(4, 22)
         Me.TabPage10.Name = "TabPage10"
         Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
@@ -3665,30 +3801,17 @@ Partial Class Form1
         Me.TabPage10.Text = "TabPage10"
         Me.TabPage10.UseVisualStyleBackColor = True
         '
-        'RichTextBox2
+        'ToolToolStripMenuItem
         '
-        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(1008, 446)
-        Me.RichTextBox2.TabIndex = 0
-        Me.RichTextBox2.Text = ""
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(631, 30)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "run tool sub"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
+        Me.ToolToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ToolToolStripMenuItem.Text = "Tool"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1022, 527)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.MenuStrip1)
@@ -3833,7 +3956,6 @@ Partial Class Form1
         Me.GroupBox53.ResumeLayout(False)
         Me.GroupBox53.PerformLayout()
         Me.TabPage9.ResumeLayout(False)
-        Me.TabPage10.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4004,7 +4126,6 @@ Partial Class Form1
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents TabPage10 As System.Windows.Forms.TabPage
-    Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
     Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
     Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
@@ -4034,9 +4155,6 @@ Partial Class Form1
     Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
     Friend WithEvents Label97 As System.Windows.Forms.Label
     Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label66 As System.Windows.Forms.Label
     Friend WithEvents Label65 As System.Windows.Forms.Label
     Friend WithEvents Label64 As System.Windows.Forms.Label
@@ -4164,6 +4282,22 @@ Partial Class Form1
     Friend WithEvents GroupBox57 As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox57 As System.Windows.Forms.CheckBox
     Friend WithEvents Label140 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label144 As System.Windows.Forms.Label
+    Friend WithEvents Label143 As System.Windows.Forms.Label
+    Friend WithEvents Label142 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox12 As System.Windows.Forms.ComboBox
+    Friend WithEvents SaveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
